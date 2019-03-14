@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -19,12 +20,13 @@ import com.example.rick.drums.assets.MusicInstr;
 import static com.example.emobadaragaminglib.Base.Graphics.ImageFormat.ARGB8888;
 
 public class LoadingActivity extends AppCompatActivity {
-
+    private static final String TAG ="LoadingActivity";
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
             Intent mIntent =  new Intent(LoadingActivity.this,GameActivity.class);
+            Log.i(TAG, "run: Goign to start the GameActivity");
             LoadingActivity.this.startActivity(mIntent);
             //For The animation
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -42,15 +44,18 @@ public class LoadingActivity extends AppCompatActivity {
 
         //Setting the Layout
         setContentView(R.layout.activity_loading);
+        Log.i(TAG, "onCreate: Loading the Gif Image");
 
         //Loading the Gif
         ImageView mImageView = (ImageView) findViewById(R.id.drum_start);
-        Glide.with(this)
-                .load(R.drawable.drums_start)
-                .into(mImageView);
+        mImageView.setImageResource(R.drawable.drums);
+//        Glide.with(this)
+//                .load(R.drawable.drums_start)
+//                .into(mImageView);
 
+        Log.i(TAG, "onCreate: Waiting for the 2sec before starting the activity");
         //Wait for the Loading of the Assets and Starting the Game
-        handler.postDelayed(runnable,4000);
+        handler.postDelayed(runnable,2000);
     }
 
     private void LoadAssests(){
