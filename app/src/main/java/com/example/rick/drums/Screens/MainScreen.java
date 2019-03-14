@@ -20,22 +20,20 @@ public class MainScreen extends Screen {
     public MainScreen(Game game) {
         super(game);
         Log.i(TAG, "MainScreen: Initialized the Screen");
-        floor_tom = new Instrument(game,MusicInstr.floor_tom_image,MusicInstr.floor_tom_audio,0,100,100,100);
-        snare = new Instrument(game,MusicInstr.snare_image,MusicInstr.snare_audio,0,200,100,100);
-        bass = new Instrument(game,MusicInstr.bass_image,MusicInstr.bass_audio,0,300,100,100);
-        hihat = new Instrument(game,MusicInstr.hihat_image,MusicInstr.hihat_audio,0,400,100,100);
+        floor_tom = new Instrument(game,MusicInstr.floor_tom_image,MusicInstr.floor_tom_audio,220,400,400,200);
+        snare = new Instrument(game,MusicInstr.snare_image,MusicInstr.snare_audio,980,400,200,200);
+        bass = new Instrument(game,MusicInstr.bass_image,MusicInstr.bass_audio,580,520,200,200);
+        hihat = new Instrument(game,MusicInstr.hihat_image,MusicInstr.hihat_audio,800,50,800,200);
         bg = new Sprite(game,Decor.bg,0,0,game.getGraphics().getHeight(),game.getGraphics().getWidth());
+
+        //The Sprites will respect the order you put them into
+        //So Make sure that you add your decor and background first before you put the
+        //sprites that you want the user to interact with
         addSprite(bg);
         addSprite(floor_tom);
         addSprite(snare);
         addSprite(bass);
         addSprite(hihat);
-
-        floor_tom.draw(game);
-        bass.draw(game);
-        hihat.draw(game);
-        hihat.draw(game);
-        bg.draw(game);
     }
 
     @Override
