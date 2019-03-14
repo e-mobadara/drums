@@ -1,6 +1,8 @@
 package com.example.rick.drums.state;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +11,12 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.emobadaragaminglib.Base.Graphics;
+import com.example.emobadaragaminglib.Implementation.AndroidImage;
 import com.example.rick.drums.R;
+import com.example.rick.drums.assets.MusicInstr;
+
+import static com.example.emobadaragaminglib.Base.Graphics.ImageFormat.ARGB8888;
 
 public class LoadingActivity extends AppCompatActivity {
 
@@ -48,5 +55,7 @@ public class LoadingActivity extends AppCompatActivity {
 
     private void LoadAssests(){
         //Load all the assets here while loading
+        //Unfortunately we can't until we have a Game object. Sucks right?
+        //It should't be this way. I agree
     }
 }

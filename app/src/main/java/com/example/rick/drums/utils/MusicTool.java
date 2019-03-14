@@ -22,9 +22,12 @@ public class MusicTool {
      * @param resource It is going to be something like R.drawable.image
      * @return
      */
+    /*
+    //Gonna resolve the problem of using an xml svg image.
     public  Image ConvertToBitmap(int resource){
         Bitmap mBitmap = BitmapFactory.decodeResource(getResources(resource));
         return new AndroidImage(mBitmap,Graphics.ImageFormat.ARGB8888);
 
     }
+    */
 }
