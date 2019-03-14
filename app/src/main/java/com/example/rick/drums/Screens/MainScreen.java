@@ -25,15 +25,17 @@ public class MainScreen extends Screen {
         bass = new Instrument(game,MusicInstr.bass_image,MusicInstr.bass_audio,0,300,100,100);
         hihat = new Instrument(game,MusicInstr.hihat_image,MusicInstr.hihat_audio,0,400,100,100);
         bg = new Sprite(game,Decor.bg,0,0,game.getGraphics().getHeight(),game.getGraphics().getWidth());
+        addSprite(bg);
         addSprite(floor_tom);
         addSprite(snare);
         addSprite(bass);
         addSprite(hihat);
-        addSprite(bg);
+
         floor_tom.draw(game);
         bass.draw(game);
         hihat.draw(game);
         hihat.draw(game);
+        bg.draw(game);
     }
 
     @Override
