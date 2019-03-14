@@ -3,7 +3,6 @@ package com.example.rick.drums.Sprites;
 import com.example.emobadaragaminglib.Base.Game;
 import com.example.emobadaragaminglib.Base.Image;
 import com.example.emobadaragaminglib.Components.Sprite;
-import com.example.emobadaragaminglib.Implementation.AndroidAudio;
 import com.example.emobadaragaminglib.Implementation.AndroidSound;
 
 public class Instrument extends Sprite {
