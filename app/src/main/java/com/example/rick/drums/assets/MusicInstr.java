@@ -10,7 +10,7 @@ public class MusicInstr {
     //It just feels so Odd to me
 
     //Images
-    public static com.example.emobadaragaminglib.Base.Image bass_image;
+    public static Image bass_image;
     public static Image floor_tom_image;
     public static Image hihat_image;
     public static Image snare_image;

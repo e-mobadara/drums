@@ -20,11 +20,11 @@ public class MainScreen extends Screen {
     public MainScreen(Game game) {
         super(game);
         Log.i(TAG, "MainScreen: Initialized the Screen");
-        floor_tom = new Instrument(game,MusicInstr.floor_tom_image,MusicInstr.floor_tom_audio,220,400,400,200);
-        snare = new Instrument(game,MusicInstr.snare_image,MusicInstr.snare_audio,980,400,200,200);
-        bass = new Instrument(game,MusicInstr.bass_image,MusicInstr.bass_audio,580,520,200,200);
-        hihat = new Instrument(game,MusicInstr.hihat_image,MusicInstr.hihat_audio,800,50,800,200);
-        bg = new Sprite(game,Decor.bg,0,0,game.getGraphics().getHeight(),game.getGraphics().getWidth());
+        floor_tom = new Instrument(MusicInstr.floor_tom_image,MusicInstr.floor_tom_audio,220,400,400,200);
+        snare = new Instrument(MusicInstr.snare_image,MusicInstr.snare_audio,980,400,200,200);
+        bass = new Instrument(MusicInstr.bass_image,MusicInstr.bass_audio,580,520,200,200);
+        hihat = new Instrument(MusicInstr.hihat_image,MusicInstr.hihat_audio,800,50,800,200);
+        bg = new Sprite(Decor.bg,0,0,game.getGraphics().getHeight(),game.getGraphics().getWidth());
 
         //The Sprites will respect the order you put them into
         //So Make sure that you add your decor and background first before you put the
@@ -51,6 +51,16 @@ public class MainScreen extends Screen {
             Instrument ss = (Instrument) s;
             ss.play();
         }
+    }
+
+    @Override
+    public void handleTouchUp(int x, int y, int pointer) {
+        super.handleTouchUp(x, y, pointer);
+    }
+
+    @Override
+    public void handleDragging(int x, int y, int pointer) {
+        super.handleDragging(x, y, pointer);
     }
 
     @Override

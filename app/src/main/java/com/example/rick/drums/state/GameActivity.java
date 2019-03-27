@@ -21,6 +21,11 @@ public class GameActivity extends AndroidGame {
         return new MainScreen(this);
     }
 
+    @Override
+    public void setScreen(Screen screen) {
+        super.setScreen(screen);
+    }
+
     public void initAssets(){
         //Images
         MusicInstr.bass_image = getGraphics().newImage(R.drawable.bass,Graphics.ImageFormat.ARGB8888,getResources());
